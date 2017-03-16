@@ -26,16 +26,15 @@ RUN SIMULATOR...
   
   
   export PATH=$PATH:$HOME/jsbsim/src
-   export PATH=$PATH:$HOME/ardupilot/Tools/autotest
-   export PATH=/usr/lib/ccache:$PATH
-    . ~/.bashrc
-    cd ardupilot/ArduCopter/
-    sim_vehicle.py -w
-    sim_vehicle.py --console --map -v=ArduCopter
-    sim_vehicle.py -j4 -L KSFO
+  export PATH=$PATH:$HOME/ardupilot/Tools/autotest
+  export PATH=/usr/lib/ccache:$PATH
+  . ~/.bashrc
+  cd ardupilot/ArduCopter/
+  sim_vehicle.py -j4 -L KSFO --console
 
 
-RUN VISUALIZATIOn 
+
+RUN VISUALIZATION
 
   export PATH=$PATH:$HOME/jsbsim/src
   export PATH=$PATH:$HOME/ardupilot/Tools/autotest
