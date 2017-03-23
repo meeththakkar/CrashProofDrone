@@ -112,6 +112,10 @@ use rc 5 1000 for stabilize
 use rc 5 1600 for mode 21 ( crash proof mode) 
 
 
+Arduino Delay Library 
+http://www.forward.com.au/pfod/ArduinoProgramming/TimingDelaysInArduino.html
+
+
 Meet Commands.
 
 http://askubuntu.com/questions/66070/how-to-set-windows-bootloader-as-default-bootloader
