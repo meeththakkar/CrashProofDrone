@@ -2,21 +2,29 @@
 Crash Proof Drone 
 
 
+the brach which we are using is at https://github.com/meeththakkar/ardupilot/commits/Copter-3.4.5.crashproof
 
-COMMANDS 
-
+Setup.
 
   http://ardupilot.org/dev/docs/setting-up-sitl-on-linux.html#setting-up-sitl-on-linux
 
 RUN SIMULATOR... 
 
+export PATH=$PATH:$HOME/jsbsim/src
+export PATH=$PATH:$HOME/ardupilot/Tools/autotest
+export PATH=/usr/lib/ccache:$PATH
+. ~/.bashrc
+cd ardupilot/ArduCopter/
+sim_vehicle.py -j4 -L KSFO --console -f hexa
+
+
 
 
   sudo apt-get install python-matplotlib python-serial python-wxgtk2.8 python-wxtools python-lxml
-    export PATH=$PATH:$HOME/jsbsim/src
-   export PATH=$PATH:$HOME/ardupilot/Tools/autotest
-    export PATH=/usr/lib/ccache:$PATH
-   . ~/.bashrc
+export PATH=$PATH:$HOME/jsbsim/src
+export PATH=$PATH:$HOME/ardupilot/Tools/autotest
+export PATH=/usr/lib/ccache:$PATH
+. ~/.bashrc
     cd ..
     cd ardupilot/ArduPlane
     sim_vehicle.py -w
@@ -44,8 +52,6 @@ RUN VISUALIZATION
   cd ~/ardupilot/Tools/autotest/
   fg_quad_view.sh
 
-
-http://askubuntu.com/questions/66070/how-to-set-windows-bootloader-as-default-bootloader
 
 
 
@@ -98,6 +104,21 @@ git clone https://github.com/ArduPilot/MAVProxy.git
 Repos I edited
 ~/MAVProxy/
 Ardupilot
+
+
+
+do load param my_may.param once 
+use rc 5 1000 for stabilize 
+use rc 5 1600 for mode 21 ( crash proof mode) 
+
+
+Meet Commands.
+
+http://askubuntu.com/questions/66070/how-to-set-windows-bootloader-as-default-bootloader
+
+Resolve atheros network issue.
+sudo su
+echo "options ath9k nohwcrypt=1" >> /etc/modprobe.d/ath9k.conf
 
 
 
