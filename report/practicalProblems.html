@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2017-04-27T18:35:10.959848288"/>
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2017-04-27T18:05:55.731341891">
+</head>
+<body lang="en-US" dir="ltr">
+<h1>Team E2- <a href="index.html">Crash Proof Drone</a> 
+</h1>
+<p><b>Practical Problems</b></p>
+<p><b>Following are the common problems we faced: </b>
+</p>
+<p><b>1. Beaglebone black is not very resilient </b><span style="font-weight: normal">
+platform for project which has high physical wear and tear and not
+advisable to use for first time builders. We used Beaglebone black
+initially but it was not really needed in our case as we just
+modified code in ardupilot’s repository. The ardupilot code can be
+run by APM, pixhawk or many other platforms which are much more
+stable in terms of performance and durability. </span><b>Use
+Beaglebone Black only if needed.</b></p>
+<p><b>2. MAVProxy motor test: </b><span style="font-weight: normal">
+mavproxy’s motortest command takes an input argument which is  a
+motor number. However, it does not </span><span style="font-weight: normal">correspond</span><span style="font-weight: normal">
+to motor number positions given on ardupilot’s website. In
+Ardupilot hexa plus configuration, motor number 2 corresponds to
+motor at 6 o’clock position ( exactly behind the controller’s
+front )  but , in motor test command it corresponds to a motor at 2
+)clock position. If you are running motortest command for each motor
+and you are testing motor 1,2,3,4,… in this sequence then motors
+should run starting from motor 1 ( usually in front in plus
+configuration ) and keep going in clockwise direction if your motors
+are connected in right way.</span></p>
+<p><b>3. SITL does not replicate exact physical simulation: </b><span style="font-weight: normal">One
+of the crash-proof mode which we developed worked in simulation but
+it failed in real test. We believe that it was due to untuned PID
+parameters and settings we could not </span><span style="font-weight: normal">try
+to tune PID because we did not have good harness for drone which will
+make it safe</span><span style="font-weight: normal">. </span>
+</p>
+<p><b>4. At high horizontal velocity the motors may not respond to
+change in altitude request.</b></p>
+<p><a href="index.html">back</a></p>
+</body>
+</html>
