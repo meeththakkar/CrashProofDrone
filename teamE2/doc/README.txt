@@ -12,3 +12,61 @@ How to run crash proof drone.
 
 
 
+
+Following is setup for SITL 
+
+
+
+Setup.
+
+  http://ardupilot.org/dev/docs/setting-up-sitl-on-linux.html#setting-up-sitl-on-linux
+
+RUN SIMULATOR... 
+
+export PATH=$PATH:$HOME/jsbsim/src
+export PATH=$PATH:$HOME/ardupilot/Tools/autotest
+export PATH=/usr/lib/ccache:$PATH
+. ~/.bashrc
+cd ardupilot/ArduCopter/
+sim_vehicle.py -j4 -L KSFO --console -f hexa
+
+
+
+
+  sudo apt-get install python-matplotlib python-serial python-wxgtk2.8 python-wxtools python-lxml
+export PATH=$PATH:$HOME/jsbsim/src
+export PATH=$PATH:$HOME/ardupilot/Tools/autotest
+export PATH=/usr/lib/ccache:$PATH
+. ~/.bashrc
+    cd ..
+    cd ardupilot/ArduPlane
+    sim_vehicle.py -w
+    sim_vehicle.py --console --map --aircraft test
+    sudo sim_vehicle.py --console --map --aircraft test
+    sudo apt-get install flightgear
+  
+  
+  export PATH=$PATH:$HOME/jsbsim/src
+  export PATH=$PATH:$HOME/ardupilot/Tools/autotest
+  export PATH=/usr/lib/ccache:$PATH
+  . ~/.bashrc
+  cd ardupilot/ArduCopter/
+  sim_vehicle.py -j4 -L KSFO --console
+
+
+
+RUN VISUALIZATION
+
+  export PATH=$PATH:$HOME/jsbsim/src
+  export PATH=$PATH:$HOME/ardupilot/Tools/autotest
+  export PATH=/usr/lib/ccache:$PATH
+  . ~/.bashrc
+  cd /ardupilot/Tools/autotest/
+  cd ~/ardupilot/Tools/autotest/
+  fg_quad_view.sh
+
+
+
+
+
+
