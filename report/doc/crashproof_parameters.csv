@@ -1,0 +1,9 @@
+parameter name ,Unit, description, typical value
+PILOT_VELOCITY_Z_MAX,cm/s,sets maximum and minimum verticle speed pilot may request,500
+PILOT_ACCEL_Z,cm/s/s,set maximum acceleration pilot may request ,250
+CP_MIN_ALT,cm,"minimum altitude allowed in crash proof mode ( Note: This does not gurantee that drone will not go below this level, but when crash situation happens this is the altitude where drone will try to hover.",50
+cp_pid_p,unit less,PID parameter for PID which controls drone’s hover Proportional gain ,0.005
+cp_pid_i,unit less,PID parameter for PID which controls drone’s hover Integral gain ,0.00005
+cp_pid_d,unit less,PID parameter for PID which controls drone’s hover Derivative gain ,0.0007
+cp_pid_base,unitless,PID parameter for PID which controls drone’s hover default offset ( ideally this should be close to 0.2-0.3 because at this throttle drone tends to hover ) ,0.2
+cp_max_accel,cm/s/s,Estimate of maximum acceleration drone can provide in upwards direction ( if drone can go in updawrd direction with 9.8m/s/s acceleration this should be 980,400
